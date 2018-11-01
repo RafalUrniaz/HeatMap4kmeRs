@@ -1,2 +1,3 @@
-# Vis4kmeRs
+# Matplotlib4kmeRs
+
 Visualization package dedicated to kmeRs similarity score matrix 
