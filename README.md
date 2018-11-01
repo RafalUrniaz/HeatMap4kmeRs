@@ -1,3 +1,3 @@
-# Matplotlib4kmeRs
+# PyVis4kmeRs
 
 Visualization package dedicated to kmeRs similarity score matrix 
