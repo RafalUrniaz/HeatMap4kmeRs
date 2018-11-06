@@ -6,9 +6,10 @@
 try:
     from heatmap import heatmap
     from heatmap import read_file
-    print("import: [-- OK --]")
 except ImportError:
     print("Could not import heatmap4kmers package")
+else:
+    print("import: [-- OK --]")
 
 
 # Import / test sample file 
