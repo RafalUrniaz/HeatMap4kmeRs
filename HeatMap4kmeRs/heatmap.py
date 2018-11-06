@@ -1,8 +1,8 @@
 # (C) Rafal Urniaz
 #  
 
-def read_file(filename)
+def read_file(filename = ""):
     return filename
 
-def heat_map(matrix):
+def heatmap(matrix = ""):
     return matrix

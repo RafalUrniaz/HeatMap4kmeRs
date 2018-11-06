@@ -4,7 +4,8 @@
 # Import modules
 
 try:
-    from heat_map import heat_map
+    from heatmap import heatmap
+    from heatmap import read_file
     print("import: [-- OK --]")
 except ImportError:
     print("Could not import heatmap4kmers package")
@@ -12,8 +13,10 @@ except ImportError:
 
 # Import / test sample file 
 
+x = read_file()
+print(x)
 
 # Prepare the HeatMap
 
-x = heat_map()
+x = heatmap()
 print(x)
