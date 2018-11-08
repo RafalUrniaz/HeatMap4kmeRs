@@ -35,7 +35,7 @@ def read_file(filename = ""):
 
 #Function takes as an argument .. and returns pandas' dataframe
 
-def heatmap(file_dataframe):
+def quick_heatmap(file_dataframe):
 
 # Prepare data
 
@@ -48,29 +48,32 @@ def heatmap(file_dataframe):
     # data to the heatmap plot
     data = file_dataframe.values
 
+# Prepare HeatMap
 
-    #fig, ax = matplotlib.pyplot.subplots()
     fig, ax = plt.subplots()
-    im = ax.imshow(data)
+    ax.imshow(data)
 
-    # We want to show all ticks...
+    # Show all ticks
     ax.set_xticks(np.arange(len(x_labels)))
     ax.set_yticks(np.arange(len(y_labels)))
 
-    # ... and label them with the respective list entries
+    # Label with the respective list entries
     ax.set_xticklabels(x_labels)
     ax.set_yticklabels(y_labels)
 
-    # Rotate the tick labels and set their alignment.
+    # Rotate 45 degrees the labels and set their alignment
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
     # Loop over data dimensions and create text annotations.
     for i in range(len(y_labels)):
         for j in range(len(x_labels)):
-            text = ax.text(j, i, data[i, j],ha="center", va="center", color="w")
+            ax.text(j, i, data[i, j],ha="center", va="center", color="w")
 
     ax.set_title("data of local x_labels")
     fig.tight_layout()
+
+# Save or show the plot
+
     plt.show()
 
     return "Done!" 

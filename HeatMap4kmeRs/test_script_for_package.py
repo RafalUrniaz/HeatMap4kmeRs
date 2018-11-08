@@ -4,7 +4,7 @@
 # Import modules
 
 try:
-    from heatmap import heatmap
+    from heatmap import quick_heatmap
     from heatmap import read_file
     print("import: [-- OK --]")
 except ImportError:
@@ -16,5 +16,5 @@ x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
 
 
 # Prepare the HeatMap
-x = heatmap(file_dataframe = x)
+x = quick_heatmap(file_dataframe = x)
 print(x)
