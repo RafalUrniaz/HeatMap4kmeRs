@@ -16,7 +16,6 @@ import matplotlib.pyplot as plt
 # Function takes as an argument the filename and directory 
 # and returns pandas' dataframe
 
-
 def read_file(filename = ""):
 
     if os.path.isfile(filename) and os.access(filename, os.R_OK):
@@ -33,11 +32,11 @@ def read_file(filename = ""):
     
     return file_dataframe
 
-#Function takes as an argument .. and returns pandas' dataframe
 
-def quick_heatmap(file_dataframe):
+# Prepare data function takes as an argument the read_file() function
+# output and returns list of dataframe
 
-# Prepare data
+def prepare_data(file_dataframe):
 
     # x axis labels - columns names
     x_labels = file_dataframe.columns
@@ -47,6 +46,34 @@ def quick_heatmap(file_dataframe):
 
     # data to the heatmap plot
     data = file_dataframe.values
+
+    return [x_labels, y_labels, data]
+
+
+# Save heatmap in location defined by filename 
+
+def save_or_show_heatmap(plt, show = True, file_name = ""):
+
+    # Show = True
+    if show == True:
+        plt.show()
+    if show == False:
+        plt.savefig(file_name)
+    return ""
+
+
+# Prepare data function takes as an argument the read_file() function
+# output and returns list of dataframe
+
+def quick_heatmap(file_dataframe, title = "Example GATTACA HeatMap", file_name = ""):
+
+# Prepare data
+    
+    x = prepare_data(file_dataframe)
+
+    x_labels = x[0]
+    y_labels = x[1]
+    data = x[2]
 
 # Prepare HeatMap
 
@@ -69,11 +96,11 @@ def quick_heatmap(file_dataframe):
         for j in range(len(x_labels)):
             ax.text(j, i, data[i, j],ha="center", va="center", color="w")
 
-    ax.set_title("data of local x_labels")
+    ax.set_title(title)
     fig.tight_layout()
 
 # Save or show the plot
 
-    plt.show()
+    save_or_show_heatmap(plt, True, file_name)
 
     return "Done!" 
