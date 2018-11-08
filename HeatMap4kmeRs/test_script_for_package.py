@@ -11,12 +11,10 @@ except ImportError:
     print("Could not import heatmap4kmers package")
 
 
-# Import / test sample file 
-
+# Import sample_file 
 x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
-print(x)
+
 
 # Prepare the HeatMap
-
-x = heatmap()
+x = heatmap(file_dataframe = x)
 print(x)
