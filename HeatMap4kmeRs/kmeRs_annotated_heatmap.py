@@ -13,7 +13,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 # External
-import matplotlib_heatmap_functions
+import general_heatmap_functions
 
 # Function takes as an argument the filename and directory 
 # and returns pandas' dataframe
@@ -58,16 +58,15 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
 
     # Show = True
     if show == True:
-        plt.show()
-    if show == False:
         plt.savefig(file_name)
+    if show == False:
+        plt.show()
     return ""
 
 
-# Prepare data function takes as an argument the read_file() function
-# output and returns list of dataframe
+# 
 
-def quick_kmeRs_heatmap(file_dataframe, title = "Example GATTACA HeatMap", show = True, file_name = ""):
+def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", title_alignment ="Bottom", legend_label = "Similarity Score", save_file = False, file_name = "Figure_1"):
 
 # Prepare data
     
@@ -82,6 +81,17 @@ def quick_kmeRs_heatmap(file_dataframe, title = "Example GATTACA HeatMap", show 
     fig, ax = plt.subplots()
     im = ax.imshow(data)
 
+# -- Create colorbar / legend --
+
+    cbar = ax.figure.colorbar(im, ax=ax )
+    cbar.ax.set_ylabel(legend_label, rotation=-90, va="bottom")
+
+# -- Title --
+    if title_alignment == "Bottom":
+        ax.set_xlabel(title)
+    else:
+        ax.set_title(title)
+    
 # -- Lablels --
 
     # Show all ticks
@@ -95,18 +105,22 @@ def quick_kmeRs_heatmap(file_dataframe, title = "Example GATTACA HeatMap", show 
     # Rotate 45 degrees the labels and set their alignment
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
+    # Let the horizontal axes labeling appear on top.
+    ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False)
+
+    # Rotate the tick labels and set their alignment.
+    plt.setp(ax.get_xticklabels(), rotation=-30, ha="right",
+             rotation_mode="anchor")
+
     # Loop over data dimensions and create text annotations.
     for i in range(len(y_labels)):
         for j in range(len(x_labels)):
             ax.text(j, i, data[i, j],ha="center", va="center", color="w")
 
-    ax.set_title(title)
-
-
     fig.tight_layout()
 
 # Save or show the plot
 
-    save_or_show_heatmap(plt, show, file_name)
+    save_or_show_heatmap(plt, save_file, file_name)
 
     return "Done!"

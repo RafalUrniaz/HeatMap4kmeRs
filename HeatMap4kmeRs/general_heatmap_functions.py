@@ -58,7 +58,7 @@ def heatmap(data, row_labels, col_labels, ax=None,
              rotation_mode="anchor")
 
     # Turn spines off and create white grid.
-    for edge, spine in ax.spines.items():
+    for spine in ax.spines.items():
         spine.set_visible(False)
 
     ax.set_xticks(np.arange(data.shape[1]+1)-.5, minor=True)
