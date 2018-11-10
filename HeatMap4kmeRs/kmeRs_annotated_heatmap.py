@@ -1,5 +1,5 @@
-# (C) Rafal Urniaz
-#  
+## (C) Rafal Urniaz
+# 
 
 # Import required modules
 import os, csv, sys
@@ -53,6 +53,9 @@ def prepare_data(file_dataframe):
 
 
 # Save heatmap in location defined by filename 
+    """
+    save_or_show_heatmap
+    """
 
 def save_or_show_heatmap(plt, show = True, file_name = ""):
 
@@ -64,11 +67,13 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
     return ""
 
 
-# 
+    """
+    kmeRs_annotated_heatmap
+    """
 
 def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", title_alignment ="Bottom", legend_label = "Similarity Score", save_file = False, file_name = "Figure_1"):
 
-# Prepare data
+
     
     x = prepare_data(file_dataframe)
 

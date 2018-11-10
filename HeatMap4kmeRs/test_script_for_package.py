@@ -1,5 +1,5 @@
-# (C) Rafal Urniaz
-
+## (C) Rafal Urniaz
+#
 # Test functions in heatmap4kmers package
 # Import modules
 
