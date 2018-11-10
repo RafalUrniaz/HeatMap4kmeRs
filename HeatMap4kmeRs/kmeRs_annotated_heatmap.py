@@ -1,5 +1,5 @@
-## (C) Rafal Urniaz
-# 
+# (C) Rafal Urniaz
+#  
 
 # Import required modules
 import os, csv, sys
@@ -9,16 +9,33 @@ import numpy as np
 import pandas as pd
 
 # Graphics 
-import matplotlib
+import matplotlib as mpl
 import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 # External
 import general_heatmap_functions
 
-# Function takes as an argument the filename and directory 
-# and returns pandas' dataframe
 
 def read_file(filename = ""):
+    """
+    Create a heatmap from a numpy array and two lists of labels.
+
+    Arguments:
+        data       : A 2D numpy array of shape (N,M)
+        row_labels : A list or array of length N with the labels
+                     for the rows
+        col_labels : A list or array of length M with the labels
+                     for the columns
+    Optional arguments:
+        ax         : A matplotlib.axes.Axes instance to which the heatmap
+                     is plotted. If not provided, use current axes or
+                     create a new one.
+        cbar_kw    : A dictionary with arguments to
+                     :meth:`matplotlib.Figure.colorbar`.
+        cbarlabel  : The label for the colorbar
+    All other arguments are directly passed on to the imshow call.
+    """
 
     if os.path.isfile(filename) and os.access(filename, os.R_OK):
         file_dataframe = pd.read_csv(filename, sep = ";", index_col = 0)
@@ -39,7 +56,24 @@ def read_file(filename = ""):
 # output and returns list of dataframe
 
 def prepare_data(file_dataframe):
+    """
+    Create a heatmap from a numpy array and two lists of labels.
 
+    Arguments:
+        data       : A 2D numpy array of shape (N,M)
+        row_labels : A list or array of length N with the labels
+                     for the rows
+        col_labels : A list or array of length M with the labels
+                     for the columns
+    Optional arguments:
+        ax         : A matplotlib.axes.Axes instance to which the heatmap
+                     is plotted. If not provided, use current axes or
+                     create a new one.
+        cbar_kw    : A dictionary with arguments to
+                     :meth:`matplotlib.Figure.colorbar`.
+        cbarlabel  : The label for the colorbar
+    All other arguments are directly passed on to the imshow call.
+    """
     # x axis labels - columns names
     x_labels = file_dataframe.columns
 
@@ -53,12 +87,25 @@ def prepare_data(file_dataframe):
 
 
 # Save heatmap in location defined by filename 
-    """
-    save_or_show_heatmap
-    """
-
 def save_or_show_heatmap(plt, show = True, file_name = ""):
+    """
+    Create a heatmap from a numpy array and two lists of labels.
 
+    Arguments:
+        data       : A 2D numpy array of shape (N,M)
+        row_labels : A list or array of length N with the labels
+                     for the rows
+        col_labels : A list or array of length M with the labels
+                     for the columns
+    Optional arguments:
+        ax         : A matplotlib.axes.Axes instance to which the heatmap
+                     is plotted. If not provided, use current axes or
+                     create a new one.
+        cbar_kw    : A dictionary with arguments to
+                     :meth:`matplotlib.Figure.colorbar`.
+        cbarlabel  : The label for the colorbar
+    All other arguments are directly passed on to the imshow call.
+    """
     # Show = True
     if show == True:
         plt.savefig(file_name)
@@ -67,14 +114,28 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
     return ""
 
 
+def kmeRs_annotated_heatmap(file_dataframe, cmap="viridis", title = "Example GATTACA HeatMap", 
+                            title_alignment ="Bottom", show_legend= True, legend_label = "Similarity Score", 
+                            save_file = False, file_name = "Figure_1"):
     """
-    kmeRs_annotated_heatmap
+    Create a heatmap from a numpy array and two lists of labels.
+
+    Arguments:
+        data       : A 2D numpy array of shape (N,M)
+        row_labels : A list or array of length N with the labels
+                     for the rows
+        col_labels : A list or array of length M with the labels
+                     for the columns
+    Optional arguments:
+        ax         : A matplotlib.axes.Axes instance to which the heatmap
+                     is plotted. If not provided, use current axes or
+                     create a new one.
+        cbar_kw    : A dictionary with arguments to
+                     :meth:`matplotlib.Figure.colorbar`.
+        cbarlabel  : The label for the colorbar
+    All other arguments are directly passed on to the imshow call.
     """
 
-def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", title_alignment ="Bottom", legend_label = "Similarity Score", save_file = False, file_name = "Figure_1"):
-
-
-    
     x = prepare_data(file_dataframe)
 
     x_labels = x[0]
@@ -83,20 +144,16 @@ def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", t
 
 # Prepare HeatMap
 
+    #matplotlib.style.use("classic") # ['dark_background']
+    plt
     fig, ax = plt.subplots()
-    im = ax.imshow(data)
+    im = ax.imshow(data, cmap = cmap)
 
 # -- Create colorbar / legend --
+    if show_legend == True:
+        cbar = ax.figure.colorbar(im, ax=ax)
+        cbar.ax.set_ylabel(legend_label, rotation=-90, va="bottom")
 
-    cbar = ax.figure.colorbar(im, ax=ax )
-    cbar.ax.set_ylabel(legend_label, rotation=-90, va="bottom")
-
-# -- Title --
-    if title_alignment == "Bottom":
-        ax.set_xlabel(title)
-    else:
-        ax.set_title(title)
-    
 # -- Lablels --
 
     # Show all ticks
@@ -110,12 +167,16 @@ def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", t
     # Rotate 45 degrees the labels and set their alignment
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
-    # Let the horizontal axes labeling appear on top.
-    ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False)
-
-    # Rotate the tick labels and set their alignment.
-    plt.setp(ax.get_xticklabels(), rotation=-30, ha="right",
-             rotation_mode="anchor")
+# -- Title --
+    if title_alignment == "Bottom":
+        ax.set_xlabel(title)
+        # Let the horizontal axes labeling appear on top.
+        ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False)
+        # Rotate the tick labels and set their alignment.
+        plt.setp(ax.get_xticklabels(), rotation=-30, ha="right", rotation_mode="anchor")
+    else:
+        ax.set_title(title)
+        #ax.tick_params(top=False, bottom=True, labeltop=False, labelbottom=True)
 
     # Loop over data dimensions and create text annotations.
     for i in range(len(y_labels)):
@@ -129,3 +190,8 @@ def kmeRs_annotated_heatmap(file_dataframe, title = "Example GATTACA HeatMap", t
     save_or_show_heatmap(plt, save_file, file_name)
 
     return "Done!"
+
+
+
+# Have colormaps separated into categories:
+# http://matplotlib.org/examples/color/colormaps_reference.html
