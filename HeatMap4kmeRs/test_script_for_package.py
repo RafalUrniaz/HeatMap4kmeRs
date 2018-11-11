@@ -29,5 +29,5 @@ x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
 #kmeRs_annotated_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
 
 # RdBu positive vs. negative values
-kmeRs_annotated_heatmap(file_dataframe = x, cmap="RdBu")
+kmeRs_annotated_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
 

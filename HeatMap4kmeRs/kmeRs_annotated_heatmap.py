@@ -114,7 +114,7 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
     return ""
 
 
-def kmeRs_annotated_heatmap(file_dataframe, cmap="viridis", title = "Example GATTACA HeatMap", 
+def kmeRs_annotated_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
                             title_alignment ="Bottom", show_legend= True, legend_label = "Similarity Score", 
                             save_file = False, file_name = "Figure_1"):
     """
@@ -179,9 +179,10 @@ def kmeRs_annotated_heatmap(file_dataframe, cmap="viridis", title = "Example GAT
         #ax.tick_params(top=False, bottom=True, labeltop=False, labelbottom=True)
 
     # Loop over data dimensions and create text annotations.
-    for i in range(len(y_labels)):
-        for j in range(len(x_labels)):
-            ax.text(j, i, data[i, j],ha="center", va="center", color="w")
+    if show_values == True:
+        for i in range(len(y_labels)):
+            for j in range(len(x_labels)):
+                ax.text(j, i, data[i, j],ha="center", va="center", color="w")
 
     fig.tight_layout()
 
