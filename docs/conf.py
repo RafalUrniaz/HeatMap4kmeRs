@@ -14,8 +14,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))
-print(sys.path.insert(0, os.path.abspath('../..')))
+sys.path.insert(0, os.path.abspath('../HeatMap4kmeRs/'))
+print(sys.path.insert(0, os.path.abspath('../HeatMap4kmeRs/')))
 print(sys.path)
 # -- Project information -----------------------------------------------------
 
