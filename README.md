@@ -10,6 +10,3 @@ Example output
 
 
 
-
-
-
