@@ -9,4 +9,3 @@ Example output
 ![Figure_3.png](Examples/Figure_3.png)
 
 
-
