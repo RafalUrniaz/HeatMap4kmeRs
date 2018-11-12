@@ -8,4 +8,3 @@ Example output
 ![Figure_1.png](Examples/Figure_1.png)
 ![Figure_3.png](Examples/Figure_3.png)
 
-
