@@ -1,7 +1,7 @@
-heatmap4kmers
+HeatMap4kmeRs
 =============
 
 .. toctree::
    :maxdepth: 4
 
-   heatmap4kmers
+   HeatMap4kmeRs

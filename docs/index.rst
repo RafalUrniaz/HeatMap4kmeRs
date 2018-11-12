@@ -10,8 +10,6 @@ Welcome to HeatMap4kmeRs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
-
 Indices and tables
 ==================
 

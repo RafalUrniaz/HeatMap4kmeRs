@@ -14,8 +14,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..\\heatmap4kmers\\'))
-print(os.path.abspath('..\\heatmap4kmers\\'))
+sys.path.insert(0, os.path.abspath('..\\HeatMap4kmeRs\\'))
+print(os.path.abspath('..\\HeatMap4kmeRs\\'))
 
 
 # -- Project information -----------------------------------------------------
@@ -63,7 +63,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'test_script.py']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None

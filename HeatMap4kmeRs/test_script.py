@@ -1,9 +1,12 @@
+# -*- coding: utf-8 -*-
+"""Test script module for heatmap4kmers package
+
+This module demonstrates the example charts for kmeRs package
+
+"""
 ## (C) Rafal Urniaz
-#
 
-# Test functions in heatmap4kmers package
 # Import modules
-
 try:
     from kmers_heatmap import kmers_heatmap
     from kmers_heatmap import read_file
@@ -17,17 +20,20 @@ except ImportError:
     print("Could not import heatmap4kmers package [-- Error --]")
 
 
-# Import sample_file 
-x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
+if __name__ == '__main__':
 
-# Prepare the Quick HeatMap Demo
+# --- Import sample_file 
+
+    x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
+
+# --- Prepare Quick HeatMap Demo
 
 # Standard
-#kmers_heatmap(file_dataframe = x, show_legend = False)
+    #kmers_heatmap(file_dataframe = x, show_legend = False)
 
 # Categorised
-#kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
+    #kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
 
 # RdBu positive vs. negative values
-kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
+    kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
 

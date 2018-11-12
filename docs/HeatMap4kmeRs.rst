@@ -1,38 +1,31 @@
-heatmap4kmers package
+HeatMap4kmeRs package
 =====================
 
 Submodules
 ----------
 
-heatmap4kmers.general\_heatmap module
+HeatMap4kmeRs.general\_heatmap module
 -------------------------------------
 
-.. automodule:: heatmap4kmers.general_heatmap
+.. automodule:: HeatMap4kmeRs.general_heatmap
     :members:
     :undoc-members:
     :show-inheritance:
 
-heatmap4kmers.kmers\_heatmap module
+HeatMap4kmeRs.kmers\_heatmap module
 -----------------------------------
 
-.. automodule:: heatmap4kmers.kmers_heatmap
+.. automodule:: HeatMap4kmeRs.kmers_heatmap
     :members:
     :undoc-members:
     :show-inheritance:
 
-heatmap4kmers.test\_script module
+HeatMap4kmeRs.test\_script module
 ---------------------------------
 
-.. automodule:: heatmap4kmers.test_script
+.. automodule:: HeatMap4kmeRs.test_script
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-Module contents
----------------
-
-.. automodule:: heatmap4kmers
-    :members:
-    :undoc-members:
-    :show-inheritance:

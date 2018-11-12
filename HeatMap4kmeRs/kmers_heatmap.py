@@ -20,7 +20,7 @@ import general_heatmap
 def read_file(filename = ""):
     """Function reads kmeRs package output 
 
-    Function reads \*.csv output from kmeRs package and returns file content in a pandas data frame
+    Function reads csv output from kmeRs package and returns file content in a pandas data frame
 
     Args:
         filename (str): full or abstract file path
