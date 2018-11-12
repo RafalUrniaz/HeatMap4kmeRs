@@ -5,16 +5,16 @@
 # Import modules
 
 try:
-    # Graphics 
-    import matplotlib.pyplot as plt
-
     from kmers_heatmap import kmers_heatmap
     from kmers_heatmap import read_file
+
+    # Graphics 
+    import matplotlib.pyplot as plt
 
     #import matplotlib_heatmap_functions
     print("import: [-- OK --]")
 except ImportError:
-    print("Could not import heatmap4kmers package")
+    print("Could not import heatmap4kmers package [-- Error --]")
 
 
 # Import sample_file 
