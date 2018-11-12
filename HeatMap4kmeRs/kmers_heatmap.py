@@ -20,15 +20,13 @@ import general_heatmap
 def read_file(filename = ""):
     """Function reads kmeRs package output 
 
-    Function reads *.csv output from kmeRs package 
-    and returns file content in a pandas data frame
+    Function reads \*.csv output from kmeRs package and returns file content in a pandas data frame
 
     Args:
         filename (str): full or abstract file path
 
     Returns:
         dataframe: file content in a pandas data frame 
-
     """
 
     if os.path.isfile(filename) and os.access(filename, os.R_OK):
@@ -59,7 +57,6 @@ def prepare_data(file_dataframe):
 
     Returns:
         list: list of x_labels, y_labels, data, respectively
-
     """
     # x axis labels - columns names
     x_labels = file_dataframe.columns
@@ -88,7 +85,6 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
 
     Returns:
         bool: True if successful
-
     """
     # Show = True
     try:
@@ -123,7 +119,6 @@ def kmers_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "
     
     Returns:
         bool: True if successful
-
     """
     try:
         x = prepare_data(file_dataframe)

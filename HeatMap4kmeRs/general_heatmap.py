@@ -28,7 +28,7 @@ def heatmap(data, row_labels, col_labels, ax=None,
         cbarlabel (str): The label for the colorbar
 
     Returns:
-        plot
+        plot (im, cbar)
     """
 
     if not ax:
@@ -71,35 +71,25 @@ def heatmap(data, row_labels, col_labels, ax=None,
 def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
                      textcolors=["black", "white"],
                      threshold=None, **textkw):
-    """Summary line.
+    """A function to annotate a heatmap
 
-    Extended description of function.
+    A function to annotate a heatmap
 
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        im (): The AxesImage to be labeled 
+        data (str): Data used to annotate. If None, the image's data is used.
+        valfmt (int): The format of the annotations inside the heatmap.
+            This should either use the string format method, e.g.
+            "$ {x:.2f}", or be a :class:`matplotlib.ticker.Formatter`.
+        textcolors (int): A list or array of two color specifications. The first is
+            used for values below a threshold, the second for those above.
+        threshold (int): Value in data units according to which the colors from 
+            textcolors are applied. If None (the default) uses the 
+            middle of the colormap as separation. 
 
     Returns:
         bool: Description of return value
 
-    # ---- 
-    A function to annotate a heatmap.
-
-    Arguments:
-        im         : The AxesImage to be labeled.
-    Optional arguments:
-        data       : Data used to annotate. If None, the image's data is used.
-        valfmt     : The format of the annotations inside the heatmap.
-                     This should either use the string format method, e.g.
-                     "$ {x:.2f}", or be a :class:`matplotlib.ticker.Formatter`.
-        textcolors : A list or array of two color specifications. The first is
-                     used for values below a threshold, the second for those
-                     above.
-        threshold  : Value in data units according to which the colors from
-                     textcolors are applied. If None (the default) uses the
-                     middle of the colormap as separation.
-
-    Further arguments are passed on to the created text labels.
     """
 
     if not isinstance(data, (list, np.ndarray)):
