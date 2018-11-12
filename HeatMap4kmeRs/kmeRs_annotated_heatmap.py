@@ -18,23 +18,17 @@ import general_heatmap_functions
 
 
 def read_file(filename = ""):
-    """
-    Create a heatmap from a numpy array and two lists of labels.
+    """Summary line.
 
-    Arguments:
-        data       : A 2D numpy array of shape (N,M)
-        row_labels : A list or array of length N with the labels
-                     for the rows
-        col_labels : A list or array of length M with the labels
-                     for the columns
-    Optional arguments:
-        ax         : A matplotlib.axes.Axes instance to which the heatmap
-                     is plotted. If not provided, use current axes or
-                     create a new one.
-        cbar_kw    : A dictionary with arguments to
-                     :meth:`matplotlib.Figure.colorbar`.
-        cbarlabel  : The label for the colorbar
-    All other arguments are directly passed on to the imshow call.
+    Extended description of function.
+
+    Args:
+        arg1 (int): Description of arg1
+        arg2 (str): Description of arg2
+
+    Returns:
+        bool: Description of return value
+
     """
 
     if os.path.isfile(filename) and os.access(filename, os.R_OK):
@@ -56,23 +50,17 @@ def read_file(filename = ""):
 # output and returns list of dataframe
 
 def prepare_data(file_dataframe):
-    """
-    Create a heatmap from a numpy array and two lists of labels.
+    """Summary line.
 
-    Arguments:
-        data       : A 2D numpy array of shape (N,M)
-        row_labels : A list or array of length N with the labels
-                     for the rows
-        col_labels : A list or array of length M with the labels
-                     for the columns
-    Optional arguments:
-        ax         : A matplotlib.axes.Axes instance to which the heatmap
-                     is plotted. If not provided, use current axes or
-                     create a new one.
-        cbar_kw    : A dictionary with arguments to
-                     :meth:`matplotlib.Figure.colorbar`.
-        cbarlabel  : The label for the colorbar
-    All other arguments are directly passed on to the imshow call.
+    Extended description of function.
+
+    Args:
+        arg1 (int): Description of arg1
+        arg2 (str): Description of arg2
+
+    Returns:
+        bool: Description of return value
+
     """
     # x axis labels - columns names
     x_labels = file_dataframe.columns
@@ -88,23 +76,17 @@ def prepare_data(file_dataframe):
 
 # Save heatmap in location defined by filename 
 def save_or_show_heatmap(plt, show = True, file_name = ""):
-    """
-    Create a heatmap from a numpy array and two lists of labels.
+    """Summary line.
 
-    Arguments:
-        data       : A 2D numpy array of shape (N,M)
-        row_labels : A list or array of length N with the labels
-                     for the rows
-        col_labels : A list or array of length M with the labels
-                     for the columns
-    Optional arguments:
-        ax         : A matplotlib.axes.Axes instance to which the heatmap
-                     is plotted. If not provided, use current axes or
-                     create a new one.
-        cbar_kw    : A dictionary with arguments to
-                     :meth:`matplotlib.Figure.colorbar`.
-        cbarlabel  : The label for the colorbar
-    All other arguments are directly passed on to the imshow call.
+    Extended description of function.
+
+    Args:
+        arg1 (int): Description of arg1
+        arg2 (str): Description of arg2
+
+    Returns:
+        bool: Description of return value
+
     """
     # Show = True
     if show == True:
@@ -117,23 +99,17 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
 def kmeRs_annotated_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
                             title_alignment ="Bottom", show_legend= True, legend_label = "Similarity Score", 
                             save_file = False, file_name = "Figure_1"):
-    """
-    Create a heatmap from a numpy array and two lists of labels.
+    """Summary line.
 
-    Arguments:
-        data       : A 2D numpy array of shape (N,M)
-        row_labels : A list or array of length N with the labels
-                     for the rows
-        col_labels : A list or array of length M with the labels
-                     for the columns
-    Optional arguments:
-        ax         : A matplotlib.axes.Axes instance to which the heatmap
-                     is plotted. If not provided, use current axes or
-                     create a new one.
-        cbar_kw    : A dictionary with arguments to
-                     :meth:`matplotlib.Figure.colorbar`.
-        cbarlabel  : The label for the colorbar
-    All other arguments are directly passed on to the imshow call.
+    Extended description of function.
+
+    Args:
+        arg1 (int): Description of arg1
+        arg2 (str): Description of arg2
+
+    Returns:
+        bool: Description of return value
+
     """
 
     x = prepare_data(file_dataframe)
