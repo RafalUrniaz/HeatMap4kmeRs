@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 def heatmap(data, row_labels, col_labels, ax=None,
             cbar_kw={}, cbarlabel="", **kwargs):
-	"""Summary line.
+    """Summary line.
 
     Extended description of function.
 
@@ -23,8 +23,7 @@ def heatmap(data, row_labels, col_labels, ax=None,
     Returns:
         bool: Description of return value
 
-    """
-    """
+    # -- 
     Create a heatmap from a numpy array and two lists of labels.
 
     Arguments:
@@ -83,7 +82,7 @@ def heatmap(data, row_labels, col_labels, ax=None,
 def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
                      textcolors=["black", "white"],
                      threshold=None, **textkw):
-	"""Summary line.
+    """Summary line.
 
     Extended description of function.
 
@@ -94,8 +93,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
     Returns:
         bool: Description of return value
 
-    """
-    """
+    # ---- 
     A function to annotate a heatmap.
 
     Arguments:

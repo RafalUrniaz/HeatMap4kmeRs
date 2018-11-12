@@ -11,23 +11,23 @@ import pandas as pd
 # Graphics 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 # External
-import general_heatmap_functions
+import general_heatmap
 
+# Read Data
 
 def read_file(filename = ""):
-    """Summary line.
+    """Function reads kmeRs package output 
 
-    Extended description of function.
+    Function reads *.csv output from kmeRs package 
+    and returns file content in a pandas data frame
 
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        filename (str): full or abstract file path
 
     Returns:
-        bool: Description of return value
+        dataframe: file content in a pandas data frame 
 
     """
 
@@ -36,24 +36,25 @@ def read_file(filename = ""):
         file_dataframe = pd.DataFrame(file_dataframe.iloc[1:len(file_dataframe.iloc[0])], dtype = "float_")
         print("File exists and is readable [-- OK --]")
 
-        # Print first 5 rows
+        # Print first 3 rows
         print(file_dataframe.iloc[0:3,])
     
     else:
-        print("Either the file is missing or not readable")
+        print("Either the file is missing or not readable [-- Error --]")
         sys.exit()
     
     return file_dataframe
 
 
-# Prepare data function takes as an argument the read_file() function
-# output and returns list of dataframe
+# Prepare Data
 
 def prepare_data(file_dataframe):
-    """Summary line.
+    """Prepare data function takes as an argument the read_file() function output and returns list of dataframe
 
-    Extended description of function.
-
+    Function reads *.csv output from kmeRs package 
+    and separates the col and rows names as x and y
+    axis and matrix values
+    
     Args:
         arg1 (int): Description of arg1
         arg2 (str): Description of arg2

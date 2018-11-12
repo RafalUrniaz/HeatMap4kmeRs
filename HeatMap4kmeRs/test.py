@@ -5,8 +5,8 @@
 # Import modules
 
 try:
-    from kmeRs_annotated_heatmap import kmeRs_annotated_heatmap
-    from kmeRs_annotated_heatmap import read_file
+    from kmers_heatmap import kmeRs_annotated_heatmap
+    from kmers_heatmap import read_file
 
     # Graphics 
     import matplotlib.pyplot as plt
