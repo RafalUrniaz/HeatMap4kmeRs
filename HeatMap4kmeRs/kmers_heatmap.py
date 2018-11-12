@@ -87,7 +87,7 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
             and file name where the plot should be saved
 
     Returns:
-        bool: True if it goes well
+        bool: True if successful
 
     """
     # Show = True
@@ -101,7 +101,7 @@ def save_or_show_heatmap(plt, show = True, file_name = ""):
         return False
 
 
-def kmeRs_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
+def kmers_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
                             title_alignment ="Bottom", show_legend= True, legend_label = "Similarity Score", 
                             save_file = False, file_name = "Figure_1"):
     """Function generates heatmap 
@@ -110,17 +110,19 @@ def kmeRs_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "
     some parameters can be specified by the user 
 
     Args:
-        file_dataframe (str): 
-        show_values (bool):
-        cmap (str):
-        title (str):
-        title_alignment (str):
-        show_legend (bool):
-        legend_label (str):
-        save_file (bool):
-
+        file_dataframe (str): result of prepare_data function
+        show_values (bool): if True values lables will be vivisble on the graph
+        cmap (str): matlab color map style, 'viridis' by default
+            more at http://matplotlib.org/examples/color/colormaps_reference.html 
+        title (str): graph title 
+        title_alignment (str): graph title location; 'Bottom' or 'Top' available
+        show_legend (bool): if True the legend is visible on the graph  
+        legend_label (str): legend tittle
+        save_file (bool): if True the file will be save to name given by file_name variable
+        file_name (str): full or abstract file path
+    
     Returns:
-        bool: Description of return value
+        bool: True if successful
 
     """
     try:
@@ -178,10 +180,6 @@ def kmeRs_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "
 
         save_or_show_heatmap(plt, save_file, file_name)
         return True
-        
+
     except:
         return False
-
-
-# Have colormaps separated into categories:
-# http://matplotlib.org/examples/color/colormaps_reference.html

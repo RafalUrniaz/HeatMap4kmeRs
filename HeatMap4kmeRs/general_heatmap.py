@@ -12,34 +12,23 @@ import matplotlib.pyplot as plt
 
 def heatmap(data, row_labels, col_labels, ax=None,
             cbar_kw={}, cbarlabel="", **kwargs):
-    """Summary line.
+    """Create a heatmap from a numpy array and two lists of labels
 
     Extended description of function.
 
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        data (arr): A 2D numpy array of shape (N,M)
+        row_labels (arr): A list or array of length N with the labels for the rows
+        col_labels (arr): A list or array of length M with the labels for the columns
+        ax (str): A matplotlib.axes.Axes instance to which the heatmap 
+            is plotted. If not provided, use current axes or
+            create a new one
+        cbar_kw (str): A dictionary with arguments to :meth:`matplotlib.Figure.colorbar`
+
+        cbarlabel (str): The label for the colorbar
 
     Returns:
-        bool: Description of return value
-
-    # -- 
-    Create a heatmap from a numpy array and two lists of labels.
-
-    Arguments:
-        data       : A 2D numpy array of shape (N,M)
-        row_labels : A list or array of length N with the labels
-                     for the rows
-        col_labels : A list or array of length M with the labels
-                     for the columns
-    Optional arguments:
-        ax         : A matplotlib.axes.Axes instance to which the heatmap
-                     is plotted. If not provided, use current axes or
-                     create a new one.
-        cbar_kw    : A dictionary with arguments to
-                     :meth:`matplotlib.Figure.colorbar`.
-        cbarlabel  : The label for the colorbar
-    All other arguments are directly passed on to the imshow call.
+        plot
     """
 
     if not ax:
