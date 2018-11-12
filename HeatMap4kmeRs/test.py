@@ -5,11 +5,11 @@
 # Import modules
 
 try:
-    from kmers_heatmap import kmeRs_annotated_heatmap
-    from kmers_heatmap import read_file
-
     # Graphics 
     import matplotlib.pyplot as plt
+
+    from kmers_heatmap import kmers_heatmap
+    from kmers_heatmap import read_file
 
     #import matplotlib_heatmap_functions
     print("import: [-- OK --]")
@@ -23,11 +23,11 @@ x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
 # Prepare the Quick HeatMap Demo
 
 # Standard
-#kmeRs_annotated_heatmap(file_dataframe = x, show_legend = False)
+#kmers_heatmap(file_dataframe = x, show_legend = False)
 
 # Categorised
-#kmeRs_annotated_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
+#kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
 
 # RdBu positive vs. negative values
-kmeRs_annotated_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
+kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
 

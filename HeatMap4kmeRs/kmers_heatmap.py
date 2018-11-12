@@ -49,18 +49,16 @@ def read_file(filename = ""):
 # Prepare Data
 
 def prepare_data(file_dataframe):
-    """Prepare data function takes as an argument the read_file() function output and returns list of dataframe
+    """Function separates data frame to axes and data
 
-    Function reads *.csv output from kmeRs package 
-    and separates the col and rows names as x and y
-    axis and matrix values
+    Function takes pandas data frame and separates the
+    cols and rows names as x and y axis and matrix values
     
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        file_dataframe (str): data frame from read_file()
 
     Returns:
-        bool: Description of return value
+        list: list of x_labels, y_labels, data, respectively
 
     """
     # x axis labels - columns names
@@ -77,98 +75,112 @@ def prepare_data(file_dataframe):
 
 # Save heatmap in location defined by filename 
 def save_or_show_heatmap(plt, show = True, file_name = ""):
-    """Summary line.
+    """Function shows the heatmap or saves it
 
-    Extended description of function.
+    Function shows the kmeRs heatmap or saves it 
+    into the file
 
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        plt (str): pyplot returns from kmeRs_heatmap()
+        show (bool): if True the plot will be show
+        file_name (str): full or abstract file path 
+            and file name where the plot should be saved
 
     Returns:
-        bool: Description of return value
+        bool: True if it goes well
 
     """
     # Show = True
-    if show == True:
-        plt.savefig(file_name)
-    if show == False:
-        plt.show()
-    return ""
+    try:
+        if show == True:
+            plt.savefig(file_name)
+        if show == False:
+            plt.show()
+        return True
+    except:
+        return False
 
 
-def kmeRs_annotated_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
+def kmeRs_heatmap(file_dataframe, show_values = False, cmap="viridis", title = "Example GATTACA HeatMap", 
                             title_alignment ="Bottom", show_legend= True, legend_label = "Similarity Score", 
                             save_file = False, file_name = "Figure_1"):
-    """Summary line.
+    """Function generates heatmap 
 
-    Extended description of function.
+    Function generates heatmap with predefined kmeRs style values, 
+    some parameters can be specified by the user 
 
     Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
+        file_dataframe (str): 
+        show_values (bool):
+        cmap (str):
+        title (str):
+        title_alignment (str):
+        show_legend (bool):
+        legend_label (str):
+        save_file (bool):
 
     Returns:
         bool: Description of return value
 
     """
+    try:
+        x = prepare_data(file_dataframe)
 
-    x = prepare_data(file_dataframe)
-
-    x_labels = x[0]
-    y_labels = x[1]
-    data = x[2]
+        x_labels = x[0]
+        y_labels = x[1]
+        data = x[2]
 
 # Prepare HeatMap
 
     #matplotlib.style.use("classic") # ['dark_background']
-    plt
-    fig, ax = plt.subplots()
-    im = ax.imshow(data, cmap = cmap)
+
+        fig, ax = plt.subplots()
+        im = ax.imshow(data, cmap = cmap)
 
 # -- Create colorbar / legend --
-    if show_legend == True:
-        cbar = ax.figure.colorbar(im, ax=ax)
-        cbar.ax.set_ylabel(legend_label, rotation=-90, va="bottom")
+        if show_legend == True:
+            cbar = ax.figure.colorbar(im, ax=ax)
+            cbar.ax.set_ylabel(legend_label, rotation=-90, va="bottom")
 
 # -- Lablels --
 
     # Show all ticks
-    ax.set_xticks(np.arange(len(x_labels)))
-    ax.set_yticks(np.arange(len(y_labels)))
+        ax.set_xticks(np.arange(len(x_labels)))
+        ax.set_yticks(np.arange(len(y_labels)))
 
     # Label with the respective list entries
-    ax.set_xticklabels(x_labels)
-    ax.set_yticklabels(y_labels)
+        ax.set_xticklabels(x_labels)
+        ax.set_yticklabels(y_labels)
 
     # Rotate 45 degrees the labels and set their alignment
-    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
+        plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
 # -- Title --
-    if title_alignment == "Bottom":
-        ax.set_xlabel(title)
+        if title_alignment == "Bottom":
+            ax.set_xlabel(title)
         # Let the horizontal axes labeling appear on top.
-        ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False)
+            ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False)
         # Rotate the tick labels and set their alignment.
-        plt.setp(ax.get_xticklabels(), rotation=-30, ha="right", rotation_mode="anchor")
-    else:
-        ax.set_title(title)
-        #ax.tick_params(top=False, bottom=True, labeltop=False, labelbottom=True)
+            plt.setp(ax.get_xticklabels(), rotation=-30, ha="right", rotation_mode="anchor")
+        else:
+            ax.set_title(title)
+            #ax.tick_params(top=False, bottom=True, labeltop=False, labelbottom=True)
 
     # Loop over data dimensions and create text annotations.
-    if show_values == True:
-        for i in range(len(y_labels)):
-            for j in range(len(x_labels)):
-                ax.text(j, i, data[i, j],ha="center", va="center", color="w")
+        if show_values == True:
+            for i in range(len(y_labels)):
+                for j in range(len(x_labels)):
+                    ax.text(j, i, data[i, j],ha="center", va="center", color="w")
 
-    fig.tight_layout()
+        fig.tight_layout()
 
 # Save or show the plot
 
-    save_or_show_heatmap(plt, save_file, file_name)
-
-    return "Done!"
-
+        save_or_show_heatmap(plt, save_file, file_name)
+        return True
+        
+    except:
+        return False
 
 
 # Have colormaps separated into categories:
