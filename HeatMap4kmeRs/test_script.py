@@ -32,7 +32,7 @@ if __name__ == '__main__':
     #kmers_heatmap(file_dataframe = x, show_legend = False)
 
 # Categorised
-    #kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10))
+    kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10), save_file = True, file_name = "Figure_2")
 
 # RdBu positive vs. negative values
     kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu")
