@@ -1,5 +1,7 @@
-# (C) Rafal Urniaz
-#  
+# -*- coding: utf-8 -*-
+"""Test module contains specific heatmap functions for HeatMap4kmeRs package"""
+
+## (C) Rafal Urniaz
 
 # Import required modules
 import os, csv, sys
