@@ -1,5 +1,7 @@
-# (C) Rafal Urniaz
-#  
+# -*- coding: utf-8 -*-
+"""Test module contains universal heatmap function"""
+
+## (C) Rafal Urniaz
 
 # Data 
 import numpy as np
