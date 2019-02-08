@@ -80,13 +80,13 @@ def prepare_data(file_dataframe):
 def save_or_show_heatmap(plt, show=True, file_name=""):
     """Function shows the heatmap or saves it
 
-    Function shows the kmeRs heatmap or saves it 
+    Function shows the kmeRs heatmap or saves it
     into the file
 
     Args:
         plt (str): pyplot returns from kmeRs_heatmap()
         show (bool): if True the plot will be show
-        file_name (str): full or abstract file path 
+        file_name (str): full or abstract file path
             and file name where the plot should be saved
 
     Returns:
@@ -117,7 +117,7 @@ def kmers_heatmap(file_dataframe, show_values=False, cmap="viridis",
         show_values (bool): if True values lables will be vivisble on the graph
         cmap (str): matlab color map style, 'viridis' by default
             more at
-            http://matplotlib.org/examples/color/colormaps_reference.html 
+            http://matplotlib.org/examples/color/colormaps_reference.html
         title (str): graph title
         title_alignment (str): graph title location; 'Bottom' or 'Top'
             available
