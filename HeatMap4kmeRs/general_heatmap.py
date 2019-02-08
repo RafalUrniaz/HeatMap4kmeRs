@@ -1,31 +1,35 @@
 # -*- coding: utf-8 -*-
 """Test module contains universal heatmap function"""
 
-## (C) Rafal Urniaz
+# (C) Rafal Urniaz
 
-# Data 
+# Data
 import numpy as np
 
-# Graphics 
+# Graphics
 import matplotlib
 import matplotlib.pyplot as plt
 
 # General matplotlib HeatMap Functions
 
-def heatmap(data, row_labels, col_labels, cbar_kw,
-            ax=None, cbarlabel="", **kwargs):
+
+def heatmap(data, row_labels, col_labels, cbar_kw, ax=None, cbarlabel="",
+            **kwargs):
     """Create a heatmap from a numpy array and two lists of labels
 
     Extended description of function.
 
     Args:
         data (arr): A 2D numpy array of shape (N,M)
-        row_labels (arr): A list or array of length N with the labels for the rows
-        col_labels (arr): A list or array of length M with the labels for the columns
-        ax (str): A matplotlib.axes.Axes instance to which the heatmap 
-            is plotted. If not provided, use current axes or
-            create a new one
-        cbar_kw (str): A dictionary with arguments to :meth:`matplotlib.Figure.colorbar`
+        row_labels (arr): A list or array of length N with the
+            labels for the rows
+        col_labels (arr): A list or array of length M with the
+            labels for the columns
+        ax (str): A matplotlib.axes.Axes instance to which the
+            heatmap is plotted. If not provided, use current
+            axes or create a new one
+        cbar_kw (str): A dictionary with arguments to
+            :meth:`matplotlib.Figure.colorbar`
 
         cbarlabel (str): The label for the colorbar
 
@@ -78,16 +82,17 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
     A function to annotate a heatmap
 
     Args:
-        im (): The AxesImage to be labeled 
+        im (): The AxesImage to be labeled
         data (str): Data used to annotate. If None, the image's data is used.
         valfmt (int): The format of the annotations inside the heatmap.
             This should either use the string format method, e.g.
             "$ {x:.2f}", or be a :class:`matplotlib.ticker.Formatter`.
-        textcolors (int): A list or array of two color specifications. The first is
-            used for values below a threshold, the second for those above.
-        threshold (int): Value in data units according to which the colors from 
-            textcolors are applied. If None (the default) uses the 
-            middle of the colormap as separation. 
+        textcolors (int): A list or array of two color specifications. The
+            first is used for values below a threshold, the second for those
+            above.
+        threshold (int): Value in data units according to which the colors from
+            textcolors are applied. If None (the default) uses the
+            middle of the colormap as separation.
 
     Returns:
         bool: Description of return value
