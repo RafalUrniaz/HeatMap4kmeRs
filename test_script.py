@@ -10,8 +10,8 @@ and checks the package integrity
 # Import modules
 
 try:
-    import heatmap4kmers
-    
+    import heatmap4kmers.kmers_heatmap as hmk
+
     # Graphics 
     import matplotlib.pyplot as plt
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
 # --- Import sample_file 
     
-    x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
+    x = hmk.read_file(filename = r"example_data\example_kmeRs_matrix.csv")
     print("Load demo dataframe [-- OK --]")
 # --- Prepare Quick HeatMap Demo
     try:
