@@ -10,14 +10,15 @@ and checks the package integrity
 # Import modules
 
 try:
-    from kmers_heatmap import kmers_heatmap
-    from kmers_heatmap import read_file
+    import HeatMap4kmeRs
+    #from kmers_heatmap import kmers_heatmap
+    #from kmers_heatmap import read_file
 
     # Graphics 
     import matplotlib.pyplot as plt
 
     #import matplotlib_heatmap_functions
-    
+
     print("import: [-- OK --]")
 except ImportError:
     print("Could not import heatmap4kmers package [-- Error --]")

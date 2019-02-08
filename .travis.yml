@@ -9,4 +9,5 @@ install:
 # command to run tests
 script:
   - ls
+  - pip install HeatMap4kmeRs
   - python test_script.py
