@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="HeatMap4kmeRs",
-    version="1.1.1",
+    name="heatmap4kmers",
+    version="1.1.3",
     author="Rafal Urniaz",
     description="Visualization package dedicated to kmeRs similarity score matrix",
     long_description=long_description,

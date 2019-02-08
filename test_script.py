@@ -10,7 +10,7 @@ and checks the package integrity
 # Import modules
 
 try:
-    import heatmap4kmers.kmers_heatmap
+    import heatmap4kmers
     
     # Graphics 
     import matplotlib.pyplot as plt
