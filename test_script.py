@@ -11,8 +11,9 @@ and checks the package integrity
 
 try:
     import HeatMap4kmeRs
-    #from kmers_heatmap import kmers_heatmap
-    #from kmers_heatmap import read_file
+    
+    from kmers_heatmap import kmers_heatmap
+    from kmers_heatmap import read_file
 
     # Graphics 
     import matplotlib.pyplot as plt
