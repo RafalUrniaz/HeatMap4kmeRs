@@ -8,4 +8,5 @@ install:
   
 # command to run tests
 script:
-  - test_script.py
+  - ls
+  - python test_script.py
