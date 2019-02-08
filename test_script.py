@@ -8,7 +8,6 @@ and checks the package integrity
 ## (C) Rafal Urniaz
 
 # Import modules
-import heatmap4kmers
 
 try:
     from kmers_heatmap import kmers_heatmap
@@ -18,6 +17,7 @@ try:
     import matplotlib.pyplot as plt
 
     #import matplotlib_heatmap_functions
+    
     print("import: [-- OK --]")
 except ImportError:
     print("Could not import heatmap4kmers package [-- Error --]")
