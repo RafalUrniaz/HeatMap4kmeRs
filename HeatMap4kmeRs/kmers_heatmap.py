@@ -4,7 +4,7 @@
 ## (C) Rafal Urniaz
 
 # Import required modules
-import os, csv, sys
+import os, sys
 
 # Data 
 import numpy as np
@@ -15,7 +15,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 # External
-import general_heatmap
+import heatmap4kmers.general_heatmap
 
 # Read Data
 

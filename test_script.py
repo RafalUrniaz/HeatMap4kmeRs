@@ -31,13 +31,13 @@ if __name__ == '__main__':
 # --- Prepare Quick HeatMap Demo
     try:
 # Standard
-        kmers_heatmap(file_dataframe = x, show_legend = False, save_file = True, file_name = "Figure_1.png")
+        hmk.kmers_heatmap(file_dataframe = x, show_legend = False, save_file = True, file_name = "Figure_1.png")
         print("Save demo plot as Figure_1.png [-- OK --]")
 # Categorised
-        kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10), save_file = True, file_name = "Figure_2.png")
+        hmk.kmers_heatmap(file_dataframe = x, cmap = plt.cm.get_cmap('Blues', 10), save_file = True, file_name = "Figure_2.png")
         print("Save demo plot as Figure_2.png [-- OK --]")
 # RdBu positive vs. negative values
-        kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu", save_file = True, file_name = "Figure_3.png")
+        hmk.kmers_heatmap(file_dataframe = x[x.columns.difference(["score_total"])], cmap="RdBu", save_file = True, file_name = "Figure_3.png")
         print("Save demo plot as Figure_3.png [-- OK --]")
     except:
         print("Test not pass [-- Error --]")

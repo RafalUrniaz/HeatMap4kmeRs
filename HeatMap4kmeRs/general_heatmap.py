@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 
 # General matplotlib HeatMap Functions
 
-def heatmap(data, row_labels, col_labels, ax=None,
-            cbar_kw={}, cbarlabel="", **kwargs):
+def heatmap(data, row_labels, col_labels, cbar_kw,
+            ax=None, cbarlabel="", **kwargs):
     """Create a heatmap from a numpy array and two lists of labels
 
     Extended description of function.
