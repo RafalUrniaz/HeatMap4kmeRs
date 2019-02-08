@@ -10,11 +10,8 @@ and checks the package integrity
 # Import modules
 
 try:
-    import HeatMap4kmeRs
+    import HeatMap4kmeRs.kmers_heatmap
     
-    from kmers_heatmap import kmers_heatmap
-    from kmers_heatmap import read_file
-
     # Graphics 
     import matplotlib.pyplot as plt
 
@@ -28,11 +25,11 @@ except ImportError:
 if __name__ == '__main__':
 
 # --- Import sample_file 
-    try:
-        x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
-        print("Load demo dataframe [-- OK --]")
+    
+    x = read_file(filename = r"example_data\example_kmeRs_matrix.csv")
+    print("Load demo dataframe [-- OK --]")
 # --- Prepare Quick HeatMap Demo
-
+    try:
 # Standard
         kmers_heatmap(file_dataframe = x, show_legend = False, save_file = True, file_name = "Figure_1.png")
         print("Save demo plot as Figure_1.png [-- OK --]")
