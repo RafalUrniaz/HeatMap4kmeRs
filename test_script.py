@@ -8,6 +8,8 @@ and checks the package integrity
 ## (C) Rafal Urniaz
 
 # Import modules
+import heatmap4kmers
+
 try:
     from kmers_heatmap import kmers_heatmap
     from kmers_heatmap import read_file
