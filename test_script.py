@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Test script module for heatmap4kmers package
+"""Test script module for HeatMap4kmeRs package
 
 Test module demonstrates the example charts for kmeRs package
 and checks the package integrity
@@ -10,7 +10,7 @@ and checks the package integrity
 # Import modules
 
 try:
-    import heatmap4kmers.kmers_heatmap as hmk
+    import HeatMap4kmeRs.kmers_heatmap as hmk
 
     # Graphics
     import matplotlib.pyplot as plt
@@ -19,7 +19,7 @@ try:
 
     print("import: [-- OK --]")
 except ImportError:
-    print("Could not import heatmap4kmers package [-- Error --]")
+    print("Could not import HeatMap4kmeRs package [-- Error --]")
 
 
 if __name__ == '__main__':

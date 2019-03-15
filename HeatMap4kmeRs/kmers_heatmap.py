@@ -16,7 +16,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 # External
-import heatmap4kmers.general_heatmap
+import HeatMap4kmeRs.general_heatmap
 
 # Read Data
 
