@@ -46,5 +46,5 @@ if __name__ == '__main__':
             ["score_total"])], cmap="RdBu", save_file=True,
             file_name="Figure_3.png")
         print("Save demo plot as Figure_3.png [-- OK --]")
-    except:
+    except (RuntimeError, TypeError, NameError):
         print("Test not pass [-- Error --]")

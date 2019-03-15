@@ -191,5 +191,5 @@ def kmers_heatmap(file_dataframe, show_values=False, cmap="viridis",
         save_or_show_heatmap(plt, save_file, file_name)
         return True
 
-    except:
+    except (RuntimeError, TypeError, NameError):
         return False
