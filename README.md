@@ -2,11 +2,7 @@
 
 # HeatMap4kmeRs
 
-Visualization package dedicated to kmeRs similarity score matrix 
-
-Example output
-
-![Figure_2.png](Examples/Figure_2.png)
+Visualization package dedicated to kmeRs similarity score matrix
 
 ## Installation
 
@@ -16,3 +12,9 @@ Example output
 pip install heatmap4kmers
 
 ```
+
+## Example output
+
+![Figure_2.png](Examples/Figure_2.png)
+
+
