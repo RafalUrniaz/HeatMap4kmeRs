@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     # --- Import sample_file
 
-    x = hmk.read_file(filename=r"example_data\example_kmeRs_matrix.csv")
+    x = hmk.read_file(filename=r"example_kmeRs_matrix.csv")
     print("Load demo dataframe [-- OK --]")
 
     # --- Prepare Quick HeatMap Demo
