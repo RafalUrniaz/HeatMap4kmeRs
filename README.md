@@ -6,7 +6,7 @@ Visualization package dedicated to kmeRs similarity score matrix
 
 ## Installation
 
-```r
+```python
 # Install from PyPI 
 
 pip install heatmap4kmers
