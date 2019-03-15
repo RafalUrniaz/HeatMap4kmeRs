@@ -74,7 +74,7 @@ def heatmap(data, row_labels, col_labels, cbar_kw, ax=None, cbarlabel="",
     return im, cbar
 
 
-def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
+def annotate_heatmap(im, data=None, valfmt="",
                      textcolors=["black", "white"],
                      threshold=None, **textkw):
     """A function to annotate a heatmap
@@ -98,6 +98,8 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
         bool: Description of return value
 
     """
+
+    valfmt = "{x:.2f}"
 
     if not isinstance(data, (list, np.ndarray)):
         data = im.get_array()
