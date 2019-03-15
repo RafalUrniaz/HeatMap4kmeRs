@@ -12,9 +12,18 @@ Visualization package dedicated to kmeRs similarity score matrix
 pip install heatmap4kmers
 
 ```
-
 ## Example output
 
 ![Figure_2.png](Examples/Figure_2.png)
 
 
+## Documentation and tutorials 
+
+The documentation in included to the package.
+
+## Quick demo 
+
+```python
+
+
+```
