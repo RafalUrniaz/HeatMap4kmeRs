@@ -12,11 +12,7 @@ import numpy as np
 import pandas as pd
 
 # Graphics
-import matplotlib as mpl
 import matplotlib.pyplot as plt
-
-# External
-import HeatMap4kmeRs.general_heatmap
 
 # Read Data
 

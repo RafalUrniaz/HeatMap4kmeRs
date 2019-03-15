@@ -21,7 +21,7 @@ print(os.path.abspath('..\\HeatMap4kmeRs\\'))
 # -- Project information -----------------------------------------------------
 
 project = 'HeatMap4kmeRs'
-copyright = '2018, Rafal Urniaz, PhD'
+#copyright = '2018, Rafal Urniaz, PhD'
 author = 'Rafal Urniaz, PhD'
 
 # The short X.Y version
