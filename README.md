@@ -25,4 +25,4 @@ pip install heatmap4kmers
 
 ## Documentation and tutorials 
 
-The documentation in included to the package.
+The documentation is included in the package.
