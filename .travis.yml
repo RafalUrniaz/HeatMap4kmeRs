@@ -4,11 +4,11 @@ python:
 
 # command to install dependencies
 install:
+  - cd tests
   - pip install -r requirements.txt
   
 # command to run tests
 script:
   - ls
   - pip install HeatMap4kmeRs
-  - cd tests
   - python test_script.py
