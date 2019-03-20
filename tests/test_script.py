@@ -10,7 +10,7 @@ and checks the package integrity
 # Import modules
 
 try:
-    import heatmap4kmeRs.kmers_heatmap as hmk
+    import heatmap4kmers.kmers_heatmap as hmk
 
     # Graphics
     import matplotlib.pyplot as plt
@@ -19,7 +19,7 @@ try:
 
     print("import: [-- OK --]")
 except ImportError:
-    print("Could not import heatmap4kmeRs package [-- Error --]")
+    print("Could not import heatmap4kmers package [-- Error --]")
 
 
 if __name__ == '__main__':
