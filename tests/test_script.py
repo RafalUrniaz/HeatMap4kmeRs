@@ -10,8 +10,8 @@ and checks the package integrity
 # Import modules
 
 try:
-	import heatmap4kmers as hmk
-    #import heatmap4kmers.kmers_heatmap as hmk
+    import heatmap4kmers as hmk
+    # import heatmap4kmers.kmers_heatmap as hmk
 
     # Graphics
     import matplotlib.pyplot as plt
