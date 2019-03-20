@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="heatmap4kmers",
-    version="1.1.3",
+    version="1.1.4",
     author="Rafal Urniaz",
     description="Visualization package dedicated to kmeRs similarity score matrix",
     long_description=long_description,
