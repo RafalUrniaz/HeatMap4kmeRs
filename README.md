@@ -2,7 +2,7 @@
 
 # HeatMap4kmeRs
 
-Python visualization package recommended for [kmeRs package](https://github.com/urniaz/kmeRs). 
+[HeatMap4kmeRs](https://pypi.org/project/heatmap4kmers/) the Python visualization package recommended for [kmeRs package](https://github.com/urniaz/kmeRs). 
 
 ## Installation
 
