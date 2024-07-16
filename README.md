@@ -1,13 +1,9 @@
-![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/100%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  
-
-
-![PyPI - License](https://img.shields.io/pypi/l/heatmap4kmers.svg?color=green)
-![PyPI](https://img.shields.io/pypi/v/heatmap4kmers.svg?color=green)
-
+![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/100%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci) ![PyPI - License](https://img.shields.io/pypi/l/heatmap4kmers.svg?color=green) ![PyPI](https://img.shields.io/pypi/v/heatmap4kmers.svg?color=green)
 
 # HeatMap4kmeRs
 
-Visualization package dedicated to kmeRs similarity score matrix
+Visualization package recommended for [kmeRs package](https://github.com/urniaz/kmeRs). 
+
 
 ## Installation
 
