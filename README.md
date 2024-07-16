@@ -2,8 +2,7 @@
 
 # HeatMap4kmeRs
 
-Visualization package recommended for [kmeRs package](https://github.com/urniaz/kmeRs). 
-
+Python visualization package recommended for [kmeRs package](https://github.com/urniaz/kmeRs). 
 
 ## Installation
 
