@@ -6,7 +6,10 @@
 
 ## Installation
 
+Package is  available at the Python Package Index (PyPI) [HeatMap4kmeRs](https://pypi.org/project/heatmap4kmers/) or by command:
+
 ```python
+
 # Install from PyPI 
 
 pip install heatmap4kmers
@@ -15,7 +18,9 @@ pip install heatmap4kmers
 
 ## Example output
 
+![Figure_1.png](Examples/Figure_1.png)
 ![Figure_2.png](Examples/Figure_2.png)
+![Figure_3.png](Examples/Figure_3.png)
 
 
 ## Documentation and tutorials 
