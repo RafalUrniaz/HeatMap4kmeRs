@@ -6,7 +6,7 @@
 
 ## Installation
 
-Package is  available at the Python Package Index (PyPI) [HeatMap4kmeRs](https://pypi.org/project/heatmap4kmers/) or by command:
+Package is  available at the Python Package Index (PyPI) [HeatMap4kmeRs](https://pypi.org/project/heatmap4kmers/) or directly by command:
 
 ```python
 
