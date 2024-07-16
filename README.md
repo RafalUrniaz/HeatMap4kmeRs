@@ -1,3 +1,7 @@
+![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/100%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![CRAN/METACRAN License](https://img.shields.io/cran/l/kmeRs)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/kmeRs)
+
+
+
 [![Build Status](https://travis-ci.com/RafalUrniaz/HeatMap4kmeRs.svg?branch=master)](https://travis-ci.com/RafalUrniaz/HeatMap4kmeRs)
 ![PyPI - License](https://img.shields.io/pypi/l/heatmap4kmers.svg?color=green)
 ![PyPI](https://img.shields.io/pypi/v/heatmap4kmers.svg?color=green)
