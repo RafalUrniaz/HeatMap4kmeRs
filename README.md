@@ -13,11 +13,6 @@ pip install heatmap4kmers
 
 ```
 
-## Quick demo 
-
-```python
-
-```
 ## Example output
 
 ![Figure_2.png](Examples/Figure_2.png)
@@ -25,4 +20,4 @@ pip install heatmap4kmers
 
 ## Documentation and tutorials 
 
-The documentation is included in the package.
+The documentation and tutorials are included in the package.
