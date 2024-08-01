@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 """Test script module for HeatMap4kmeRs package
 
 Test module demonstrates the example charts for kmeRs package
