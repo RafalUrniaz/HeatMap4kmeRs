@@ -16,7 +16,7 @@ pip install heatmap4kmers
 
 ```
 
-## Example output
+## Example outputs
 
 ![Figure_1.png](Examples/Figure_1.png)
 ![Figure_2.png](Examples/Figure_2.png)
