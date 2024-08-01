@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+HeatMap4kmeRs/__init__.py
+HeatMap4kmeRs/general_heatmap.py
+HeatMap4kmeRs/kmers_heatmap.py
+heatmap4kmers.egg-info/PKG-INFO
+heatmap4kmers.egg-info/SOURCES.txt
+heatmap4kmers.egg-info/dependency_links.txt
+heatmap4kmers.egg-info/top_level.txt
+tests/test_script.py
