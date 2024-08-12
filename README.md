@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/100%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci) ![PyPI - License](https://img.shields.io/pypi/l/heatmap4kmers.svg?color=green) ![PyPI](https://img.shields.io/pypi/v/heatmap4kmers.svg?color=green)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/27da47cb4af84b9fbf058009bb251881)](https://app.codacy.com/gh/urniaz/HeatMap4kmeRs/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci) ![PyPI - License](https://img.shields.io/pypi/l/heatmap4kmers.svg?color=green) ![PyPI](https://img.shields.io/pypi/v/heatmap4kmers.svg?color=green)
 
 # HeatMap4kmeRs
 
