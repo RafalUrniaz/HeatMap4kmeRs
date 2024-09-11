@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="heatmap4kmers",
-    version="2.2.0",
+    version="2.2.1",
     author="Rafal Urniaz",
-    description="Visualization package dedicated to kmeRs similarity score matrix",
+    description="Visualization package for kmeRs similarity score matrix",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/urniaz/HeatMap4kmeRs",
+    url="https://github.com/urniaz/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
