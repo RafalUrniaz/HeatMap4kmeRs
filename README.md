@@ -14,6 +14,10 @@ pip install heatmap4kmers
 
 ```
 
+## Examples
+
+![alt text](http://url/to/img.png)
+
 ## Documentation and tutorials 
 
 The documentation and tutorials are included in the package.
