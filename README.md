@@ -16,7 +16,9 @@ pip install heatmap4kmers
 
 ## Examples
 
-![alt text](http://url/to/img.png)
+![](https://github.com/urniaz/HeatMap4kmeRs/blob/master/Examples/Figure_1.png)
+![](https://github.com/urniaz/HeatMap4kmeRs/blob/master/Examples/Figure_2.png)
+![](https://github.com/urniaz/HeatMap4kmeRs/blob/master/Examples/Figure_3.png)
 
 ## Documentation and tutorials 
 
